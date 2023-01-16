@@ -1,0 +1,171 @@
+/* Body styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+}
+
+/* HTML styles */
+html {
+  scroll-behavior: smooth;
+}
+
+/* :root styles */
+:root {
+  --main-color: #333;
+}
+
+nav {
+  background-color: #16171c;
+  color: #fff;
+  height: 80px;
+  position: relative;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  justify-content: space-evenly;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+  margin-right: 20px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+nav li {
+  margin-right: 20px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  transition: all 0.2s ease-in-out;
+}
+
+nav a:hover {
+  color: #f44336;
+}
+
+#menu-icon {
+  display: none;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+
+#menu-icon i {
+  font-size: 30px;
+  color: #fff;
+  transition: all 0.2s ease-in-out;
+}
+
+#menu-icon i:hover {
+  color: #f44336;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  nav ul {
+    display: none;
+  }
+  #menu-icon {
+    display: block;
+  }
+}
+
+/* CSS ICONS */
+
+.fa {
+  padding: 5px;
+  font-size: 15px;
+  width: 15px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+}
+
+.fa:hover {
+  color: red;
+}
+
+.fa-twitter {
+  background: #ff5700;
+  color: white;
+}
+
+.fa-telegram {
+  background: #ff5700;
+  color: white;
+}
+
+.fa-discord {
+  background: #ff5700;
+  color: white;
+}
+
+.fa-youtube {
+  background: #ff5700;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #ff5700;
+  color: white;
+}
+
+/* CSS */
+.button-24 {
+  background: #ff5700;
+  border: 1px solid #ff4742;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: nunito, roboto, proxima-nova, "proxima nova", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 16px;
+  min-height: 40px;
+  outline: 0;
+  padding: 12px 14px;
+  text-align: center;
+  text-rendering: geometricprecision;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+}
+
+.button-24:hover,
+.button-24:active {
+  background-color: initial;
+  background-position: 0 0;
+  color: #ff4742;
+}
+
+.button-24:active {
+  opacity: 0.5;
+}
