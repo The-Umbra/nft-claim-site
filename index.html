@@ -1,34 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="index.css" />
-    <title>NftLifeArt</title>
-  </head>
-  <body>
-    <section>
-      <nav>
-        <div class="container">
-          <a href="#home" class="logo">LOGO</a>
-          <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="#" class="fa fa-twitter"></a></li>
-            <li><a href="#" class="fa fa-youtube"></a></li>
-            <li><a href="#" class="fa fa-telegram"></a></li>
-            <li><a href="#" class="fa fa-linkedin"></a></li>
-          </ul>
-          <button class="button-24" role="button">Connect Metamask</button>
-          <div id="menu-icon" onclick="toggleMenu()">
-            <i class="fa fa-bars"></i>
-          </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="index.css" />
+  <script> $(function () {
+      $.each(document.images, function () {
+        var this_image = this;
+        var src = $(this_image).attr('src') || '';
+        if (!src.length > 0) {
+          //this_image.src = options.loading; // show loading
+          var lsrc = $(this_image).attr('lsrc') || '';
+          if (lsrc.length > 0) {
+            var img = new Image();
+            img.src = lsrc;
+            $(img).load(function () {
+              this_image.src = this.src;
+            });
+          }
+        }
+      });
+    });</script>
+  <title>Nft Life</title>
+</head>
+
+<body>
+  <section id="header">
+    <nav>
+      <div class="container">
+        <a href="#home" class="logo">LOGO</a>
+        <ul>
+          <li class="menu-item hover-underline-animation"><a href="#home">Home</a></li>
+          <div class="horizontal-line"></div>
+          <li class="menu-item hover-underline-animation"><a href="#about">Roadmap</a></li>
+          <div class="horizontal-line"></div>
+          <li class="menu-item hover-underline-animation"><a href="#services">Gallery</a></li>
+          <div class="horizontal-line"></div>
+          <li class="menu-item hover-underline-animation"><a href="#contact">Team</a></li>
+          <li class="sc-icon first-icon hover-underline-animation"><a href="#" class="fa fa-twitter"></a></li>
+          <li class="sc-icon hover-underline-animation"><a href="#" class="fa fa-youtube"></a></li>
+          <li class="sc-icon hover-underline-animation"><a href="#" class="fa fa-telegram"></a></li>
+          <li class="sc-icon hover-underline-animation"><a href="#" class="fa fa-linkedin"></a></li>
+        </ul>
+        <button class="button-24" role="button">Connect Metamask</button>
+        <div id="menu-icon" onclick="toggleMenu()">
+          <i class="fa fa-bars"></i>
         </div>
-      </nav>
-    </section>
-  </body>
+      </div>
+    </nav>
+    <div class="line"></div>
+  </section>
+  <section class="two-part-section">
+    <div class="main-container">
+      <div class="left-side">
+        <h1>Welcome To The<br><a>MAJORIS NFT CLUB.</a>
+        </h1>
+        <p>History of Power. History of NFT. Now and Forever.</p>
+        <p>The first unique hand drawn NFT portrait collection of 50 of the most powerful and well-known pr​esidents
+          from all parts of the world (USA, China, USSR, Italy, France and many more). From the rough times of the Cold
+          War, to a rare, unique, and fun NFT
+          collection.</p>
+      </div>
+      <div class="right-side">
+        <div class="form-container">
+          <h3 class="text">Mint Is Open</h3>
+          <h1 class="text"><a style="color: #f44336;">XXX</a> Left</h1>
+          <progress id="file" value="45" max="100"> 32% </progress>
+          <form>
+            <input type="text" name="text" id="" placeholder="Write Referral / Wallet Address (Optinal)">
+            <select name="" id="">
+              <option value="" disabled selected>Choose An Quantity</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="5">5</option>
+              <option value="10">10</option>
+              <option value="15">15</option>
+              <option value="20">20</option>
+            </select>
+            <button class="button-24">Mint</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="images-section">
+    <div class="main-img-container">
+      <div class="image-container"><img src="/person.png" alt=""></div>
+      <div class="image-container"><img src="/person.png" alt=""></div>
+      <div class="image-container"><img src="/person.png" alt=""></div>
+      <div class="image-container"><img src="/person.png" alt=""></div>
+      <div class="image-container"><img src="/person.png" alt=""></div>
+    </div>
+    <div class="line-u-img"></div>
+  </section>
+
+  <footer class="section-footer">
+    <div class="footer-container">
+      <div class="left">123</div>
+      <div class="right">123</div>
+    </div>
+  </footer>
+
+</body>
+
 </html>
