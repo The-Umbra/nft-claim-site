@@ -188,6 +188,33 @@ nav a:hover {
   opacity: 0.5;
 }
 
+/* PROGRESS BAR ANIMATION */
+
+.two-part-section .main-container .right-side .animated-progress {
+  width: 300px;
+  height: 30px;
+  border-radius: 5px;
+  margin: 20px 10px;
+  border: 1px solid rgb(189, 113, 113);
+  overflow: hidden;
+  position: relative;
+}
+
+.two-part-section .main-container .right-side .animated-progress span {
+  height: 100%;
+  display: block;
+  width: 45px;
+  color: rgb(255, 251, 251);
+  line-height: 30px;
+  position: absolute;
+  text-align: end;
+  padding-right: 5px;
+}
+
+.two-part-section .main-container .right-side .progress-red span {
+  background-color: red;
+}
+
 /* TEXT COLOR ANIMATION */
 
 .animated-text {
@@ -345,24 +372,24 @@ nav a:hover {
 
 /* LEFT SIDE CODE  */
 
-.left-side {
+.two-part-section .main-container .left-side {
   flex: 1;
   padding: 15px 40px 15px 15px;
 }
 
-.left-side h1 {
+.two-part-section .main-container .left-side h1 {
   font-size: 32px;
   color: #d4d4d4;
   text-align: center;
   line-height: 1.3;
 }
 
-.left-side a {
+.two-part-section .main-container .left-side a {
   font-size: 32px;
   color: #f44336;
 }
 
-.left-side p {
+.two-part-section .main-container .left-side p {
   font-size: 18px;
   color: #d4d4d4;
   text-align: left;
@@ -370,12 +397,12 @@ nav a:hover {
 
 /* RIGHT SIDE CODE */
 
-.right-side {
+.two-part-section .main-container .right-side {
   flex: 1;
   padding: 40px 15px 15px 15px;
 }
 
-.right-side .form-container {
+.two-part-section .main-container .right-side .form-container {
   display: flex;
   min-height: 400px;
   flex-direction: column;
@@ -388,20 +415,20 @@ nav a:hover {
   box-shadow: 0 0 15px 10px rgb(128 128 128 / 50%);
 }
 
-.right-side .form-container .text {
+.two-part-section .main-container .right-side .form-container .text {
   line-height: 0;
   font-size: 1.6rem;
   color: #d4d4d4;
 }
 
-.right-side .form-container form {
+.two-part-section .main-container .right-side .form-container form {
   display: flex;
   width: 100%;
   flex-direction: column;
   gap: 20px;
 }
 
-.right-side .form-container form input {
+.two-part-section .main-container .right-side .form-container form input {
   max-width: 450px;
   height: 50px;
   background-color: #22242b;
@@ -411,7 +438,7 @@ nav a:hover {
   color: #fff;
 }
 
-.right-side .form-container form select {
+.two-part-section .main-container .right-side .form-container form select {
   width: 100%;
   height: 50px;
   background-color: #22242b;
@@ -421,7 +448,7 @@ nav a:hover {
   border: 1px solid #404040;
 }
 
-.right-side .form-container form button {
+.two-part-section .main-container .right-side .form-container form button {
   width: 200px;
   height: 30px;
   align-self: center;

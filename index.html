@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
   <link rel="stylesheet" href="index.css" />
+  <script src="/index.js"></script>
   <script> $(function () {
       $.each(document.images, function () {
         var this_image = this;
@@ -70,7 +71,9 @@
         <div class="form-container">
           <h3 class="text">Mint Is Open</h3>
           <h1 class="text"><a style="color: #f44336;">XXX</a> Left</h1>
-          <progress id="file" value="45" max="100"> 32% </progress>
+          <div class="animated-progress progress-red">
+            <span data-progress="85"></span>
+          </div>
           <form>
             <input type="text" name="text" id="" placeholder="Write Referral / Wallet Address (Optinal)">
             <select name="" id="">
