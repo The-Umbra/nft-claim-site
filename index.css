@@ -425,7 +425,7 @@ nav a:hover {
   /* (110% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 }
 
-.images-section .line-u-img {
+.line-u-img {
   width: 55%;
   height: 3px;
   border-radius: 10px;
@@ -439,25 +439,70 @@ nav a:hover {
   display: flex;
   height: 30vh;
   justify-content: center;
-  background-color: red;
 }
 
 .section-footer .footer-container {
   width: 1024px;
   display: flex;
   flex-direction: row;
+  column-gap: 10px;
   padding: 8px;
-  background-color: grey;
 }
 
 .section-footer .footer-container .left {
-  background-color: red;
+  display: flex;
+  flex-direction: column;
   flex: 1;
 }
 
+.section-footer .footer-container .left .footer-logo {
+  padding-top: 20px;
+  font-size: 24px;
+  font-weight: 800;
+  color: #d4d4d4;
+  flex: 1;
+}
+
+.section-footer .footer-container .left .footer-info {
+  flex: 1;
+  display: flex;
+  font-size: 18px;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.section-footer .footer-container .left .footer-info a {
+  color: #d4d4d4;
+}
+
+.section-footer .footer-container .left .footer-info h4 {
+  color: #d4d4d4;
+}
+
+.section-footer .footer-container .left .footer-info .info-container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+}
+
 .section-footer .footer-container .right {
-  background-color: yellow;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px 50px;
   flex: 2;
+}
+
+.section-footer .footer-container .right .copyright {
+  font-size: 18px;
+  color: #d4d4d4;
+}
+
+.section-footer .footer-container .right .social-icons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Responsive Styles */
