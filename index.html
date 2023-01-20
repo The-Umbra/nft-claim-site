@@ -7,7 +7,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
   <link rel="stylesheet" href="index.css" />
-  <script src="/index.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.3.slim.min.js"
+    integrity="sha256-ZwqZIVdD3iXNyGHbSYdsmWP//UBokj2FHAxKuSBKDSo=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.2.7/web3.min.js"
+    integrity="sha512-yAmmVkOXqtDZRaueLdmLwMB67JtaRtjFzQGiAiJKvLiFlDvq4Tzm5R6uLcOMyvPRQlXpYHdYxc5IbiCwuquhUw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script> $(function () {
       $.each(document.images, function () {
         var this_image = this;
@@ -25,10 +29,23 @@
         }
       });
     });</script>
+  <script>
+    function checkWallet() {
+      if (window.ethereum.selectedAddress != null) {
+        var connectButton = document.getElementById("connect");
+
+        // Take Address
+        var address = window.ethereum.selectedAddress;
+        var shortaddress = address.substring(0, 11) + "..." + address.substring(38);
+        // Print Address
+        connectButton.innerHTML = shortaddress;
+      };
+    }
+  </script>
   <title>Majoris Nft Club</title>
 </head>
 
-<body>
+<body onload="javascript:checkWallet()">
   <!-- HEADER -->
   <section id="header">
     <nav>
@@ -37,17 +54,16 @@
         <ul>
           <li class="menu-item hover-underline-animation"><a href="#home">Home</a></li>
           <div class="horizontal-line"></div>
-          <li class="menu-item hover-underline-animation"><a href="#about">Roadmap</a></li>
+          <li class="menu-item hover-underline-animation"><a href="#roadmap">Roadmap</a></li>
           <div class="horizontal-line"></div>
           <li class="menu-item hover-underline-animation"><a href="#gallery">Gallery</a></li>
           <div class="horizontal-line"></div>
-          <li class="menu-item hover-underline-animation"><a href="#contact">Team</a></li>
           <li class="sc-icon first-icon hover-underline-animation"><a href="#" class="fa fa-twitter"></a></li>
           <li class="sc-icon hover-underline-animation"><a href="#" class="fa fa-youtube"></a></li>
           <li class="sc-icon hover-underline-animation"><a href="#" class="fa fa-telegram"></a></li>
           <li class="sc-icon hover-underline-animation"><a href="#" class="fa fa-linkedin"></a></li>
         </ul>
-        <button class="button-24" role="button">Connect Metamask</button>
+        <button id="connect" class="button-24">Connect Metamask</button>
         <div id="menu-icon" onclick="toggleMenu()">
           <i class="fa fa-bars"></i>
         </div>
@@ -72,7 +88,7 @@
           <h3 class="text">Mint Is Open</h3>
           <h1 class="text"><a style="color: #f44336;">XXX</a> Left</h1>
           <div class="animated-progress progress-red">
-            <span data-progress="85"></span>
+            <span data-progress="0">50%</span>
           </div>
           <form>
             <input type="text" name="text" id="" placeholder="Write Referral / Wallet Address (Optinal)">
@@ -236,11 +252,58 @@
       </div>
     </div>
     <div class="bottom-nft"><button class="button-24">SEE ALL</button></div>
+    <div style="margin-top: 30px;" class="line-u-img"></div>
   </section>
   <!-- ROADMAP SECTION -->
-  <section id="roadmap" class="section-roadmap"></section>
+  <section id="roadmap" class="section-roadmap">
+    <div class="timeline">
+      <div class="outer">
+        <div class="card">
+          <div class="info">
+            <h3 class="title">2023</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+              ea commodo consequat. </p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="info">
+            <h3 class="title">2022</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+              ea commodo consequat. </p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="info">
+            <h3 class="title">2021</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+              ea commodo consequat. </p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="info">
+            <h3 class="title">2020</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+              ea commodo consequat. </p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="info">
+            <h3 class="title">2019</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+              ea commodo consequat. </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
   <!-- FOOTER -->
   <footer class="section-footer">
+    <div class="line-u-img"></div>
     <div class="footer-container">
       <div class="left">
         <div class="footer-logo">LOGO</div>
@@ -271,7 +334,8 @@
       </div>
     </div>
   </footer>
-
+  <script src="/metamask.js"></script>
+  <script src="/index.js"></script>
 </body>
 
 </html>
