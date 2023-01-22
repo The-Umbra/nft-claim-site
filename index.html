@@ -29,19 +29,6 @@
         }
       });
     });</script>
-  <script>
-    function checkWallet() {
-      if (window.ethereum.selectedAddress != null) {
-        var connectButton = document.getElementById("connect");
-
-        // Take Address
-        var address = window.ethereum.selectedAddress;
-        var shortaddress = address.substring(0, 11) + "..." + address.substring(38);
-        // Print Address
-        connectButton.innerHTML = shortaddress;
-      };
-    }
-  </script>
   <title>Majoris Nft Club</title>
 </head>
 
@@ -64,9 +51,6 @@
           <li class="sc-icon hover-underline-animation"><a href="#" class="fa fa-linkedin"></a></li>
         </ul>
         <button id="connect" class="button-24">Connect Metamask</button>
-        <div id="menu-icon" onclick="toggleMenu()">
-          <i class="fa fa-bars"></i>
-        </div>
       </div>
     </nav>
     <div class="line"></div>
@@ -110,11 +94,11 @@
   <!-- IMAGE SECTION -->
   <section class="images-section">
     <div class="main-img-container">
-      <div class="image-container"><img src="/person.png" alt=""></div>
-      <div class="image-container"><img src="/person.png" alt=""></div>
-      <div class="image-container"><img src="/person.png" alt=""></div>
-      <div class="image-container"><img src="/person.png" alt=""></div>
-      <div class="image-container"><img src="/person.png" alt=""></div>
+      <div class="image-container"><img src="./images/person.png" alt=""></div>
+      <div class="image-container"><img src="./images/person.png" alt=""></div>
+      <div class="image-container"><img src="./images/person.png" alt=""></div>
+      <div class="image-container"><img src="./images/person.png" alt=""></div>
+      <div class="image-container"><img src="./images/person.png" alt=""></div>
     </div>
     <div class="line-u-img"></div>
   </section>
@@ -251,7 +235,7 @@
         </div>
       </div>
     </div>
-    <div class="bottom-nft"><button class="button-24">SEE ALL</button></div>
+    <div class="bottom-nft"><a href="/gallery.html" class="button-24">SEE ALL</a></div>
     <div style="margin-top: 30px;" class="line-u-img"></div>
   </section>
   <!-- ROADMAP SECTION -->

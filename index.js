@@ -27,3 +27,21 @@ $(".two-part-section .main-container .right-side .animated-progress span").each(
     $(this).text($(this).attr("data-progress") + "%");
   }
 );
+
+function checkWallet() {
+  if (window.ethereum.selectedAddress != null) {
+    var connectButton = document.getElementById("connect");
+
+    // Take Address
+    var address = window.ethereum.selectedAddress;
+    var shortaddress = address.substring(0, 11) + "..." + address.substring(38);
+    // Print Address
+    connectButton.innerHTML = shortaddress;
+  }
+  if (window.ethereum.networkVersion != 5) {
+    window.ethereum.request({
+      method: "wallet_switchEthereumChain",
+      params: [{ chainId: "0x5" }], // chainId must be in hexadecimal numbers
+    });
+  }
+}

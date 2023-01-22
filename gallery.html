@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="index.css" />
+    <script src="https://code.jquery.com/jquery-3.6.3.slim.min.js"
+        integrity="sha256-ZwqZIVdD3iXNyGHbSYdsmWP//UBokj2FHAxKuSBKDSo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.2.7/web3.min.js"
+        integrity="sha512-yAmmVkOXqtDZRaueLdmLwMB67JtaRtjFzQGiAiJKvLiFlDvq4Tzm5R6uLcOMyvPRQlXpYHdYxc5IbiCwuquhUw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script> $(function () {
+            $.each(document.images, function () {
+                var this_image = this;
+                var src = $(this_image).attr('src') || '';
+                if (!src.length > 0) {
+                    //this_image.src = options.loading; // show loading
+                    var lsrc = $(this_image).attr('lsrc') || '';
+                    if (lsrc.length > 0) {
+                        var img = new Image();
+                        img.src = lsrc;
+                        $(img).load(function () {
+                            this_image.src = this.src;
+                        });
+                    }
+                }
+            });
+        });</script>
+    <title>Majoris Nft Club</title>
+</head>
+
+<body onload="javascript:checkWallet()">
+    <!-- HEADER -->
+    <section id="header">
+        <nav>
+            <div class="container">
+                <a href="/#home" class="logo">LOGO</a>
+                <ul>
+                    <li class="menu-item hover-underline-animation"><a href="/#home">Home</a></li>
+                    <div class="horizontal-line"></div>
+                    <li class="menu-item hover-underline-animation"><a href="/#roadmap">Roadmap</a></li>
+                    <div class="horizontal-line"></div>
+                    <li class="menu-item hover-underline-animation"><a style="color: #FF5700;"
+                            href="/gallery.html">Gallery</a></li>
+                    <div class="horizontal-line"></div>
+                    <li class="sc-icon first-icon hover-underline-animation"><a href="#" class="fa fa-twitter"></a></li>
+                    <li class="sc-icon hover-underline-animation"><a href="#" class="fa fa-youtube"></a></li>
+                    <li class="sc-icon hover-underline-animation"><a href="#" class="fa fa-telegram"></a></li>
+                    <li class="sc-icon hover-underline-animation"><a href="#" class="fa fa-linkedin"></a></li>
+                </ul>
+                <button id="connect" class="button-24">Connect Metamask</button>
+            </div>
+        </nav>
+        <div class="line"></div>
+    </section>
+    <!-- NFT'S SECTION -->
+    <section id="gallery" class="section-nfts">
+        <div class="container">
+            <div class="box">
+                <div class="imgBx">
+                    <img
+                        src="https://img.freepik.com/free-vector/chinese-dragon-head-illustration_1284-52850.jpg?w=826&t=st=1674139111~exp=1674139711~hmac=b0fa9956e5252eedb1705ed77f698cfef72186add2d098282f4b1b51bc58763c">
+                </div>
+                <div class="content">
+                    <div>
+                        <h2>Image Title</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi accusamus molestias quidem
+                            iusto.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgBx">
+                    <img
+                        src="https://img.freepik.com/free-vector/cute-young-dragon-cartoon-vector-icon-illustration-animal-nature-icon-concept-isolated-premium-vector-flat-cartoon-style_138676-3544.jpg?w=826&t=st=1674139142~exp=1674139742~hmac=a2d00296377862a8ad210967d9e35bdd339ca85b0316be0cd98bca6e05b03d58">
+                </div>
+                <div class="content">
+                    <div>
+                        <h2>Image Title</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi accusamus molestias quidem
+                            iusto.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgBx">
+                    <img
+                        src="https://img.freepik.com/free-vector/astronaut-riding-dragon-cartoon-vector-icon-illustration-science-animal-icon-concept-isolated-premium-vector-flat-cartoon-style_138676-3551.jpg?w=826&t=st=1674139177~exp=1674139777~hmac=7eb7916ba2cc7a46abf624086a1ee0958312c9f532162acb3e9e3f99aad6a0fa">
+                </div>
+                <div class="content">
+                    <div>
+                        <h2>Image Title</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi accusamus molestias quidem
+                            iusto.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgBx">
+                    <img
+                        src="https://img.freepik.com/free-vector/magical-dreams-illustration_23-2149676046.jpg?w=826&t=st=1674139225~exp=1674139825~hmac=1c25d057e49778eab246503c965a2e536d1979cede45bb0dbc686d2428495150">
+                </div>
+                <div class="content">
+                    <div>
+                        <h2>Image Title</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi accusamus molestias quidem
+                            iusto.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgBx">
+                    <img
+                        src="https://img.freepik.com/free-vector/cute-dinosaur-holiday-summer-cartoon-vector-icon-illustration-animal-holiday-icon-concept-isolated_138676-6764.jpg?w=826&t=st=1674139536~exp=1674140136~hmac=29d5bbb445d7a2ba936f87b6af052864ce8593df0f9ead0a8e3fd46794bca026">
+                </div>
+                <div class="content">
+                    <div>
+                        <h2>Image Title</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi accusamus molestias quidem
+                            iusto.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgBx">
+                    <img
+                        src="https://img.freepik.com/free-vector/cute-axolotl-swimming-cartoon-vector-icon-illustration-animal-nature-icon-concept-isolated-premium_138676-4819.jpg?w=826&t=st=1674139514~exp=1674140114~hmac=b5a58ecc968c2608eba1335273906f6e4b462ed24ce276195b79ea2befa6db76">
+                </div>
+                <div class="content">
+                    <div>
+                        <h2>Image Title</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi accusamus molestias quidem
+                            iusto.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgBx">
+                    <img
+                        src="https://img.freepik.com/free-vector/hand-drawn-dragon_53876-88179.jpg?w=826&t=st=1674139226~exp=1674139826~hmac=4c94c38117e9afe02ccf641ddc54c6793ecb47f918447eaf8833b61df17d4d3d">
+                </div>
+                <div class="content">
+                    <div>
+                        <h2>Image Title</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi accusamus molestias quidem
+                            iusto.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgBx">
+                    <img
+                        src="https://img.freepik.com/free-vector/cute-dragon-flying-cartoon-vector-icon-illustration-animal-nature-icon-concept-isolated-premium_138676-5123.jpg?w=826&t=st=1674139318~exp=1674139918~hmac=94e774f58e07a6d0da5d49cd888a0a982c04ad5ad8b61a03117a793f89aa1450">
+                </div>
+                <div class="content">
+                    <div>
+                        <h2>Image Title</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi accusamus molestias quidem
+                            iusto.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgBx">
+                    <img
+                        src="https://img.freepik.com/free-vector/chinese-dragon-head-illustration_1284-52850.jpg?w=826&t=st=1674139111~exp=1674139711~hmac=b0fa9956e5252eedb1705ed77f698cfef72186add2d098282f4b1b51bc58763c">
+                </div>
+                <div class="content">
+                    <div>
+                        <h2>Image Title</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi accusamus molestias quidem
+                            iusto.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgBx">
+                    <img
+                        src="https://img.freepik.com/free-vector/cute-young-dragon-cartoon-vector-icon-illustration-animal-nature-icon-concept-isolated-premium-vector-flat-cartoon-style_138676-3544.jpg?w=826&t=st=1674139142~exp=1674139742~hmac=a2d00296377862a8ad210967d9e35bdd339ca85b0316be0cd98bca6e05b03d58">
+                </div>
+                <div class="content">
+                    <div>
+                        <h2>Image Title</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi accusamus molestias quidem
+                            iusto.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgBx">
+                    <img
+                        src="https://img.freepik.com/free-vector/astronaut-riding-dragon-cartoon-vector-icon-illustration-science-animal-icon-concept-isolated-premium-vector-flat-cartoon-style_138676-3551.jpg?w=826&t=st=1674139177~exp=1674139777~hmac=7eb7916ba2cc7a46abf624086a1ee0958312c9f532162acb3e9e3f99aad6a0fa">
+                </div>
+                <div class="content">
+                    <div>
+                        <h2>Image Title</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi accusamus molestias quidem
+                            iusto.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgBx">
+                    <img
+                        src="https://img.freepik.com/free-vector/magical-dreams-illustration_23-2149676046.jpg?w=826&t=st=1674139225~exp=1674139825~hmac=1c25d057e49778eab246503c965a2e536d1979cede45bb0dbc686d2428495150">
+                </div>
+                <div class="content">
+                    <div>
+                        <h2>Image Title</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi accusamus molestias quidem
+                            iusto.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgBx">
+                    <img
+                        src="https://img.freepik.com/free-vector/cute-dinosaur-holiday-summer-cartoon-vector-icon-illustration-animal-holiday-icon-concept-isolated_138676-6764.jpg?w=826&t=st=1674139536~exp=1674140136~hmac=29d5bbb445d7a2ba936f87b6af052864ce8593df0f9ead0a8e3fd46794bca026">
+                </div>
+                <div class="content">
+                    <div>
+                        <h2>Image Title</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi accusamus molestias quidem
+                            iusto.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgBx">
+                    <img
+                        src="https://img.freepik.com/free-vector/cute-axolotl-swimming-cartoon-vector-icon-illustration-animal-nature-icon-concept-isolated-premium_138676-4819.jpg?w=826&t=st=1674139514~exp=1674140114~hmac=b5a58ecc968c2608eba1335273906f6e4b462ed24ce276195b79ea2befa6db76">
+                </div>
+                <div class="content">
+                    <div>
+                        <h2>Image Title</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi accusamus molestias quidem
+                            iusto.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgBx">
+                    <img
+                        src="https://img.freepik.com/free-vector/hand-drawn-dragon_53876-88179.jpg?w=826&t=st=1674139226~exp=1674139826~hmac=4c94c38117e9afe02ccf641ddc54c6793ecb47f918447eaf8833b61df17d4d3d">
+                </div>
+                <div class="content">
+                    <div>
+                        <h2>Image Title</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi accusamus molestias quidem
+                            iusto.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgBx">
+                    <img
+                        src="https://img.freepik.com/free-vector/cute-dragon-flying-cartoon-vector-icon-illustration-animal-nature-icon-concept-isolated-premium_138676-5123.jpg?w=826&t=st=1674139318~exp=1674139918~hmac=94e774f58e07a6d0da5d49cd888a0a982c04ad5ad8b61a03117a793f89aa1450">
+                </div>
+                <div class="content">
+                    <div>
+                        <h2>Image Title</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi accusamus molestias quidem
+                            iusto.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- FOOTER SECTION -->
+    <footer class="section-footer">
+        <div class="line-u-img"></div>
+        <div class="footer-container">
+            <div class="left">
+                <div class="footer-logo">LOGO</div>
+                <div class="footer-info">
+                    <div class="info-container">
+                        <a href="">support@majoris.io</a>
+                        <a href="">White Paper</a>
+                        <a href="">Smart Contract</a>
+                    </div>
+                    <h4><a class="our-brand" href="https://majoris.io">Majoris.io ©</a></h4>
+                </div>
+            </div>
+            <div class="right">
+                <div class="copyright">
+                    “The MAJORIS NFT CLUB” are digital artwork pieces (Non-Fungible Tokens) built on the Binance Smart
+                    Chain and
+                    are not
+                    affiliated with any of the figures displayed on the NFT’s on the platform, do not aim in any way to
+                    mock these
+                    figures and are created for the sole purpose of entertainment and ownership for users and supporters
+                    of NFT’s
+                    and its ecosystem.The Majoris NFT’s were created and designed at random without the use of any real
+                    life or
+                    copyrighted content from third-party groups.
+                </div>
+                <div class="social-icons">
+                    <a href="#" class="fa fa-linkedin"></a>
+                    <a href="#" class="fa fa-twitter"></a>
+                    <a href="#" class="fa fa-youtube"></a>
+                    <a href="#" class="fa fa-telegram"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
