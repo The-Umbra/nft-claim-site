@@ -793,8 +793,8 @@ nav a:hover {
 /* Setting the border of top, bottom, left */
 .card:nth-child(odd)::before {
   left: 0px;
-  top: -4.5px;
-  bottom: -5.5px;
+  top: -5.5px;
+  bottom: -4.5px;
   border-width: 5px 0 5px 5px;
   border-radius: 50px 0 0 50px;
 }
@@ -1015,6 +1015,14 @@ nav a:hover {
 @media screen and (max-width:500px) {
   .detail-container .container .left img {
     max-width: 250px !important;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .aos-animate {
+    transition-property: none !important;
+    transform: none !important;
+    animation: none !important;
   }
 }
 
