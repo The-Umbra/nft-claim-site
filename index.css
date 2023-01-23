@@ -160,6 +160,11 @@ nav a:hover {
   color: white;
 }
 
+.fa-medium {
+  background: #ff5700;
+  color: white;
+}
+
 /* CSS */
 .button-24 {
   background: #ff5700;
@@ -426,7 +431,7 @@ nav a:hover {
   gap: 10px;
   padding: 10px;
   border: 1px solid #404040;
-  background-color: #22242b;
+  background-color: #16171C;
   box-shadow: 0 0 15px 10px rgb(128 128 128 / 50%);
 }
 
@@ -494,8 +499,8 @@ nav a:hover {
   height: 250px;
   transition: transform .2s;
   border: 1px solid #4C5166;
-  border-radius: 10px;
   background-color: #16171C;
+  border-radius: 10px 30px 10px 10px;
 }
 
 .images-section .main-img-container .image-container img {
@@ -602,7 +607,8 @@ nav a:hover {
 .section-nfts {
   display: flex;
   padding-bottom: 20px;
-  margin-top: 100px;
+  margin-top: 70px;
+  margin-bottom: 20px;
   min-height: 40vh;
   flex-direction: column;
   align-items: center;
@@ -616,7 +622,7 @@ nav a:hover {
   flex-wrap: wrap;
   transform-style: preserve-3d;
   gap: 15px;
-  perspective: 500px;
+  perspective: 800px;
 }
 
 .section-nfts .container .box {
@@ -955,6 +961,7 @@ nav a:hover {
   justify-content: space-between;
   padding: 20px 50px;
   flex: 2;
+  gap: 25px;
 }
 
 .section-footer .footer-container .right .copyright {
@@ -1042,7 +1049,8 @@ nav a:hover {
   max-width: 350px;
   border: 1px solid gainsboro;
   transform: rotateY(45deg);
-  animation: rotateAnimation 40s linear infinite;
+  animation: rotateAnimation 35s linear infinite;
+  border-radius: 10px;
 }
 
 @keyframes rotateAnimation {
